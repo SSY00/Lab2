@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.0.dtd">  
+  
+<struts>  
+	<constant name="struts.date.format" value="YYYY-MM-dd"></constant>
+	<package name="basicstruts2" extends="struts-default">   
+	
+		<action name="TheBookOfAuthor" class="Action.SearchBooksByAuthorAction" method="execute">
+			<result name="success">/BooksOfTheAuthor.jsp</result>
+			<!--<result name="error">/error.jsp</result>-->
+		</action><!--根据作者姓名查询所著图书-->
+		
+		<action name="detail" class="Action.BookDetailsAction" method="execute">
+			<result name="success">/DetailOfBook.jsp</result>
+			<!-- <result name="error">/error.jsp</result>-->
+		</action><!-- 点击图书查看图书的详细信息 -->
+		
+		<action name="delete" class="Action.DeleteBookAction" method="execute">
+			<result name="success">/DeleteSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action><!-- 根据用户的选择删除一本书 -->
+		
+	</package>  
+</struts>  
+
+					
